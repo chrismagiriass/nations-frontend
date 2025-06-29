@@ -3,13 +3,13 @@
 
     <!-- Language Column -->
     <ng-container matColumnDef="language">
-      <th mat-header-cell *matHeaderCellDef style="width: 300px;"> Language </th>
+      <th mat-header-cell *matHeaderCellDef class="custom-name-header" style="width: 300px;"> Language </th>
       <td mat-cell *matCellDef="let element"> {{ element.language }} </td>
     </ng-container>
 
     <!-- Official Column -->
     <ng-container matColumnDef="official">
-      <th mat-header-cell *matHeaderCellDef style="width: 150px;"> Official </th>
+      <th mat-header-cell *matHeaderCellDef class="custom-name-header" style="width: 150px;"> Official </th>
       <td mat-cell *matCellDef="let element">
         <mat-icon *ngIf="element.official" color="primary">check_circle</mat-icon>
         <mat-icon *ngIf="!element.official" color="warn">cancel</mat-icon>

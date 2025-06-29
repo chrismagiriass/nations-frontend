@@ -16,3 +16,8 @@
 .mat-cell {
   font-size: 14px;
 }
+
+.custom-name-header {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
