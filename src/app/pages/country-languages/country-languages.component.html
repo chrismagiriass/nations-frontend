@@ -1,1 +1,30 @@
-<p>country-languages works!</p>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="full-width-table">
+
+    <!-- Language Column -->
+    <ng-container matColumnDef="language">
+      <th mat-header-cell *matHeaderCellDef style="width: 300px;"> Language </th>
+      <td mat-cell *matCellDef="let element"> {{ element.language }} </td>
+    </ng-container>
+
+    <!-- Official Column -->
+    <ng-container matColumnDef="official">
+      <th mat-header-cell *matHeaderCellDef style="width: 150px;"> Official </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon *ngIf="element.official" color="primary">check_circle</mat-icon>
+        <mat-icon *ngIf="!element.official" color="warn">cancel</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+  <mat-paginator [length]="totalElements"
+                 [pageSize]="pageSize"
+                 [pageIndex]="currentPage - 1"
+                 [pageSizeOptions]="[10, 20, 50]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>

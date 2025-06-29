@@ -1,0 +1,10 @@
+mat-toolbar {
+  margin-bottom: 0;
+}
+
+.active-link {
+  color: var(--mdc-theme-secondary);
+  border-bottom: 2px solid var(--mdc-theme-secondary);
+  font-weight: bold;
+}
+

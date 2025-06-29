@@ -1,0 +1,27 @@
+.full-width-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mat-header-cell {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.mat-cell {
+  font-size: 14px;
+}
+
+/* Sticky header if you scroll */
+.sticky-header th.mat-header-cell {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  z-index: 2;
+  border-bottom: 2px solid #ddd;
+}

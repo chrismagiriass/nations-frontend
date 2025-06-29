@@ -3,11 +3,11 @@ import { CountriesService } from '../../services/countries.service';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-// Angular Material imports
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatIconModule} from '@angular/material/icon'
+ 
 @Component({
   selector: 'app-countries',
   standalone: true,
@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     MatPaginatorModule,
     MatButtonModule,
+    MatIconModule 
   ],
   templateUrl: './countries.component.html',
   styleUrls: ['./countries.component.css']
@@ -25,7 +26,6 @@ export class CountriesComponent implements OnInit {
   countries: any[] = [];
   displayedColumns: string[] = ['name', 'area', 'countryCode2', 'actions'];
 
-  // Pagination variables
   currentPage: number = 1;
   pageSize: number = 10;
   totalPages: number = 0;
@@ -49,12 +49,12 @@ export class CountriesComponent implements OnInit {
   }
 
   onPageChange(event: PageEvent): void {
-    this.currentPage = event.pageIndex + 1; // pageIndex is zero-based
+    this.currentPage = event.pageIndex + 1;
     this.pageSize = event.pageSize;
     this.loadCountries();
   }
 
-  goToLanguages(code: string): void {
-    this.router.navigate(['/countries', code, 'languages']);
+  goToLanguages(countryId: number) {
+  this.router.navigate(['/countries', countryId, 'languages']);
   }
 }

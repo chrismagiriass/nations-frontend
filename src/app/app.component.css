@@ -1,4 +1,11 @@
-.content {
-  padding: 16px;
-  margin-top: 64px; /* Adjust if your navbar height is different */
+/* src/app/app.component.css */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
 }

@@ -1,6 +1,6 @@
-<nav>
-  <a routerLink="/">Home</a> |
-  <a routerLink="/countries">Countries</a> |
-  <a routerLink="/max-gdp">Max GDP</a> |
-  <a routerLink="/filtered-stats">Filtered Stats</a>
+<nav class="navbar">
+  <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a mat-button routerLink="/countries" routerLinkActive="active-link">Countries</a>
+  <a mat-button routerLink="/max-gdp" routerLinkActive="active-link">Max GDP</a>
+  <a mat-button routerLink="/filtered-stats" routerLinkActive="active-link">Filtered Stats</a>
 </nav>
